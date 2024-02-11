@@ -16,7 +16,7 @@ const changeHandler = (e)=>{
 const login = async ()=>{
   console.log("Login:Success",formData)
   let responseData;
-  await fetch('http://localhost:4000/login',{
+  await fetch('https://shopoholic-igbw.onrender.com/login',{
     method:"POST",
     headers:{
       Accept:"application/form-data",
@@ -37,7 +37,7 @@ else{
 const signup = async ()=>{
   console.log("Signup:Success",formData);
   let responseData;
-  await fetch('http://localhost:4000/signup',{
+  await fetch('https://shopoholic-igbw.onrender.com/signup',{
     method:"POST",
     headers:{
       Accept:"application/form-data",
