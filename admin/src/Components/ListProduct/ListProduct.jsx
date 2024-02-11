@@ -6,7 +6,7 @@ const ListProduct = () => {
   const [allproducts,setAllproducts]=useState([]);
 
   const fetchinfo = async ()=>{
-    await fetch('http://localhost:4000/allproducts').then((res)=>res.json()).then((data)=>{setAllproducts(data)});
+    await fetch('https://shopoholic-igbw.onrender.com/allproducts').then((res)=>res.json()).then((data)=>{setAllproducts(data)});
   }
 
   useEffect(()=>{
@@ -14,7 +14,7 @@ const ListProduct = () => {
   },[])
 
   const remove_product = async(id)=>{
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch('https://shopoholic-igbw.onrender.com/removeproduct',{
       method:"POST",
       headers:{
         Accept:"application/json",
