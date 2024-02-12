@@ -71,9 +71,10 @@ const getTotalCartAmount = () => {
     {
         if(cartItems[item]>0)
         {
-            let itemInfo = all_product.find((product)=> product.id===Number(item))
+            let itemInfo = all_product.find((product) => product.id===Number(item))
+            if (itemInfo){
                 totalAmount += itemInfo.new_price * cartItems[Number(item)];
-            
+            }
         }
        
     }
